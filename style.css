@@ -72,5 +72,5 @@ body{
 
 .dev:hover{
     font-size: 30px;
-    text-shadow: 1px 1px 1px white;
+    text-shadow: 2px 2px 2px rgb(119, 0, 255);
 }
