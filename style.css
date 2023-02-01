@@ -1,23 +1,42 @@
-.container{
+*{
+    margin: 0px;
+    padding: 0px;
     font-family:monospace;
-    max-width: 500px;
+}
+
+body{
+    background-color: #49a87c;
+}
+
+.container{
+    max-width: 350px;
     height: 140px;
     margin: auto;
     text-align: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.700);
     padding: 25px;
     margin-top: 220px;
     border-radius: 90px;
     border: 1px solid black;
-    box-shadow: 2px 2px 2px rgb(119, 0, 255);
+    box-shadow: 0px 0px 15px 0px black;
     transition: max-width,height,box-shadow; 
-    transition-duration: 1s;
+    transition-duration: 500ms;
 }
 
-.container:hover{
-    max-width: 530px;
-    height: 150px;
-    box-shadow: 7px 7px 7px rgb(119, 0, 255);
+@media(max-width:760px){
+.container{
+    max-width: 280px;
+    height: 140px;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.700);
+    padding: 25px;
+    margin-top: 220px;
+    border-radius: 90px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 15px 0px black;
+    transition: max-width,height,box-shadow; 
+    transition-duration: 500ms;}
 }
 
 h1{
@@ -26,13 +45,9 @@ h1{
     font-size: 60px;
     margin-top: auto;
     margin-bottom:20px;
-    color:rgb(119, 0, 255);
+    color:#49a87c;
     transition: font-size;
     transition-duration: 1s;
-}
-
-h1:hover{
-    font-size: 70px;
 }
 
 button{
@@ -42,35 +57,52 @@ button{
     border-radius: 15px;
     background-color: white;
     padding: 7px;
-    width: 30%;
-    margin: 1px;
-    margin-bottom: 5px;
-    transition: color, border-color,background-color,font-size; 
-    transition-duration: 1s;
+    transition: color, border-color,background-color; 
+    transition-duration: 300ms;
 }
 
 button:hover{
-    color:white;
-    border-color:rgb(119, 0, 255);
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 15px;
     background-color: black;
-    font-size: 22px;
+    padding: 7px;
+    color:white;
+    border-color:#49a87c;
     cursor: pointer;  
-}
-
-body{
-   background-color: black;
 }
 
 .dev{
     color: white;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 16%;
+    text-shadow: 1px 1px 3px black;
     transition: font-size,text-shadow;
-    transition-duration: 1s;
+    transition-duration: 300ms;
 }
 
 .dev:hover{
-    font-size: 30px;
-    text-shadow: 2px 2px 2px rgb(119, 0, 255);
+    font-size: 22px;
+    text-shadow: 1px 1px 6px black;
+    cursor: default;
 }
+
+@media(max-width:760px){
+.dev{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20%;
+    text-shadow: 1px 1px 3px black;
+    transition: font-size,text-shadow;
+    transition-duration: 300ms;}
+}
+
+@media(max-width:760px){
+.dev:hover{
+    font-size: 20px;
+    text-shadow: 1px 1px 6px black;
+    cursor: default;}
+}
+

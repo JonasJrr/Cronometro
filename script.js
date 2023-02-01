@@ -1,41 +1,45 @@
-var h = 0;
-var m = 0;
-var s = 0;
+let hora = 0;
+let minuto = 0;
+let segundo = 0;
+let start = document.getElementById("iniciar");
 
-var tempo = 1000;
-var cron;
+
+let tempo = 1000;
+let cronometro;
 
 function iniciar(){
-    cron = setInterval(() => {timer()}, tempo)
+    cronometro = setInterval(() => {timer()}, tempo);
+    start.style.cssText = "display: none";
 }
 
-function parar() {
-    clearInterval(cron)  
+function pausar() {
+    clearInterval(cronometro)  
+    start.style.cssText = "display: inline";
 }
 
 function resetar(){
-    clearInterval(cron)
+    clearInterval(cronometro)
 
-    h = 0;
-    m = 0;
-    s = 0;
+    hora = 0;
+    minuto = 0;
+    segundo = 0;
 
     document.getElementById("cronometro").innerText = "00:00:00"
+    start.style.cssText = "display: inline";
 }
 
 function timer(){
 
-    s++;
+    segundo++;
 
-    if (s == 60){
-        s = 0;
-        m++;
-    
-    } if(m == 60){
-        m = 0;
-        h++;
+    if (segundo == 60){
+        segundo = 0;
+        minuto++;
+    }else if(minuto == 60){
+        minuto = 0;
+        hora++;
     }
     
-    var formato = (h < 10 ? '0'+ h : h) + ':' + (m < 10 ? '0'+ m : m) + ':' + (s < 10 ? '0' + s : s)
+    let formato = (hora < 10 ? '0'+ hora : hora) + ':' + (minuto < 10 ? '0'+ minuto : minuto) + ':' + (segundo < 10 ? '0' + segundo : segundo)
     document.getElementById("cronometro").innerText = formato
 }

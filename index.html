@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cronômetro</title>
-    <link rel="icon" href="./assets/ICON CRONO.jpeg" type="image.jpeg">
+    <link rel="icon" href="./assets/crono.png">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
     <div class="container">
         <h1 id="cronometro">00:00:00</h1>
-        <button onclick="iniciar()" class="iniciair">Iniciar</button>
-        <button onclick="parar()" class="parar">Parar</button>
+        <button id="iniciar" onclick="iniciar()">Iniciar</button>
+        <button onclick="pausar()" class="pausar">Pausar</button>
         <button onclick="resetar()" class="resetar">Resetar</button>
     </div>
 
